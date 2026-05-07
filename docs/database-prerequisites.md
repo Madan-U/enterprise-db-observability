@@ -1,54 +1,15 @@
-# Database Prerequisites & Integration
-
-Before registering any database node with the PMM Client, the underlying database engine must be configured to expose its internal metrics, query logs, and performance schemas. 
-
-This document outlines the required user privileges and engine-level configurations for MongoDB, MySQL/MariaDB, and PostgreSQL.
-
----
-
-## 🍃 1. MongoDB Requirements
-
-To monitor MongoDB effectively, PMM requires a dedicated user with cluster monitoring privileges.
-
-### 1.1 Create PMM Monitoring User
-Connect to your MongoDB instance using `mongosh` as an administrator (e.g., `admin` DB) and execute the following:
-
-```javascript
-use admin;
-
-db.createUser({
-  user: "pmm",
-  pwd: "YOUR_SECURE_PASSWORD",
-  roles: [
-    { role: "clusterMonitor", db: "admin" },
-    { role: "read", db: "local" }
-  ]
-});
-
-That is an excellent repository name. enterprise-db-observability immediately tells a hiring manager or engineering lead exactly what the project is about and the scale at which you operate.
-
-Here is the complete, professional Markdown file for your Database Prerequisites. You can save this as docs/02-database-prerequisites.md (or 03-database-integration.md depending on how you number your files).
-
-It covers all the native engine configurations required before PMM can successfully scrape metrics.
-
-📄 docs/02-database-prerequisites.md
-Markdown
-# Database Prerequisites & Integration
-
-Before registering any database node with the PMM Client, the underlying database engine must be configured to expose its internal metrics, query logs, and performance schemas. 
+Database Prerequisites & Integration
+Before registering any database node with the PMM Client, the underlying database engine must be configured to expose its internal metrics, query logs, and performance schemas.
 
 This document outlines the required user privileges and engine-level configurations for MongoDB, MySQL/MariaDB, and PostgreSQL.
 
----
-
-## 🍃 1. MongoDB Requirements
-
+🍃 1. MongoDB Requirements
 To monitor MongoDB effectively, PMM requires a dedicated user with cluster monitoring privileges.
 
-### 1.1 Create PMM Monitoring User
-Connect to your MongoDB instance using `mongosh` as an administrator (e.g., `admin` DB) and execute the following:
+1.1 Create PMM Monitoring User
+Connect to your MongoDB instance using mongosh as an administrator (e.g., admin DB) and execute the following:
 
-```javascript
+JavaScript
 use admin;
 
 db.createUser({
