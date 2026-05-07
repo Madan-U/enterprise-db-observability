@@ -27,4 +27,3 @@ Ensure the following ports are open between the PMM Server, PMM Clients, and Dat
 | PMM Client | Database Nodes | `3306`, `27017`, `5432` | TCP | MySQL, MongoDB, PostgreSQL connection |
 
 ---
-**Next Step:** Proceed to [Server Deployment](01-server-deployment.md).
